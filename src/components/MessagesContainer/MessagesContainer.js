@@ -20,11 +20,11 @@ export default function MessagesContainer(props) {
                     console.log(error);
                 }
             }
-            if (messages[messages.length - 1] && messages[messages.length - 1].toLowerCase() === 'hey ai') {
+            if (messages.length) {
                 fetchData();
             }
         },
-        [messages.length],
+        [messages],
     );
 
     const handleUserInputChange = (textInput) => {
