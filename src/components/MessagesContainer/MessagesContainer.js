@@ -12,7 +12,7 @@ export default function MessagesContainer(props) {
             const fetchData = async () => {
                 try {
                     const lastMessage = messages[messages.length - 1];
-                    const apiUrl = `http://localhost:4000?question=${lastMessage}`;
+                    const apiUrl = `https://reactopenai.azurewebsites.net?question=${lastMessage}`;
                     const newResponse = await axios(apiUrl);
                     const allResponses = [...responses, newResponse.data];
                     setResponses(allResponses);
