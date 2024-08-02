@@ -1,6 +1,7 @@
 import * as React from 'react';
 import axios from 'axios';
 import './MessagesContainer.css';
+import PatrickIMG from "../../assets/Patrick.jpg"
 
 export default function MessagesContainer(props) {
     const [userInput, setUserInput] = React.useState('');
@@ -45,7 +46,7 @@ export default function MessagesContainer(props) {
                     return (
                         <div>
                             <div> 
-                                <img src="../../assets/Patrick.jpg"/>
+                                <img src={PatrickIMG}/>
                                 <p className="user-message">{message}</p> 
                             </div>
                             <p className="ai-response">{response}</p>
