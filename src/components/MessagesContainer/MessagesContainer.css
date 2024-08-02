@@ -35,18 +35,45 @@
 
 .user-group {
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+
+.circular-image-user {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .user-image {
-    width: 5%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .user-message {
-    width: 100%;
     text-align: right;
+}
+.ai-group {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+
+.circular-image-ai {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.ai-image {
+    width: 100%;
+    object-fit: cover;
 }
 
 .ai-response {
-    width: 100%;
     text-align: left;
 }

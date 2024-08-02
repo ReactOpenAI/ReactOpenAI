@@ -2,6 +2,7 @@ import * as React from 'react';
 import axios from 'axios';
 import './MessagesContainer.css';
 import PatrickIMG from "../../assets/Patrick.jpg"
+import aiIMG from "../../assets/chatgpt.png"
 
 export default function MessagesContainer(props) {
     const [userInput, setUserInput] = React.useState('');
@@ -46,10 +47,17 @@ export default function MessagesContainer(props) {
                     return (
                         <div>
                             <div className='user-group'> 
-                                <img className="user-image" src={PatrickIMG}/>
+                                <div className='circular-image-user'>
+                                    <img className="user-image" src={PatrickIMG}/>
+                                </div>
                                 <p className="user-message">{message}</p> 
                             </div>
-                            <p className="ai-response">{response}</p>
+                            <div className="ai-group"> 
+                                <div className="circular-image">
+                                    <img classname="ai-image" src={aiIMG}/>
+                                </div>
+                                <p className="ai-response">{response}</p>
+                            </div>
                         </div>
                     );
                 })}
