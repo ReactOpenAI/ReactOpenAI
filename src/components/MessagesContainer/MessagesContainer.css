@@ -33,6 +33,14 @@
     padding: 8px;
 }
 
+.user-group {
+    display: flex;
+}
+
+.user-image {
+    width: 5%;
+}
+
 .user-message {
     width: 100%;
     text-align: right;

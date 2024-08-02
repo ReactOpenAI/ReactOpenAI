@@ -45,8 +45,8 @@ export default function MessagesContainer(props) {
                     const response = responses[index];
                     return (
                         <div>
-                            <div> 
-                                <img src={PatrickIMG}/>
+                            <div className='user-group'> 
+                                <img className="user-image" src={PatrickIMG}/>
                                 <p className="user-message">{message}</p> 
                             </div>
                             <p className="ai-response">{response}</p>
