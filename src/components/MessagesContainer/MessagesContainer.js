@@ -53,8 +53,8 @@ export default function MessagesContainer(props) {
                                 <p className="user-message">{message}</p> 
                             </div>
                             <div className="ai-group"> 
-                                <div className="circular-image">
-                                    <img classname="ai-image" src={aiIMG}/>
+                                <div className="circular-image-ai">
+                                    <img className="ai-image" src={aiIMG}/>
                                 </div>
                                 <p className="ai-response">{response}</p>
                             </div>
