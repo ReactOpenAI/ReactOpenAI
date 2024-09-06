@@ -1,20 +1,22 @@
-import * as React from 'react';
+import {useEffect, useState} from 'react';
 import axios from 'axios';
 import './MessagesContainer.css';
 import PatrickIMG from "../../assets/Patrick.jpg"
 import aiIMG from "../../assets/chatgpt.png"
 
 export default function MessagesContainer(props) {
-    const [userInput, setUserInput] = React.useState('');
-    const [messages, setMessages] = React.useState([]);
-    const [responses, setResponses] = React.useState([]);
+    const [userInput, setUserInput] = useState('');
+    const [messages, setMessages] = useState([]);
+    const [responses, setResponses] = useState([]);
+    const {aiModelSelection}=props;
+    console.log("this comment comes from MessagesContainer", aiModelSelection)
 
-    React.useEffect(
+    useEffect(
         () => {
             const fetchData = async () => {
                 try {
                     const lastMessage = messages[messages.length - 1];
-                    const apiUrl = `https://reactopenai.azurewebsites.net/get-response?question=${lastMessage}`;
+                    const apiUrl = `https://reactopenai.azurewebsites.net/get-response?question=${lastMessage}&aimodelselection=${aiModelSelection}`;
                     const newResponse = await axios(apiUrl);
                     const allResponses = [...responses, newResponse.data];
                     setResponses(allResponses);
