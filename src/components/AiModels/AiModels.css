@@ -1,0 +1,24 @@
+.ai-models-container {
+    width: 20vw;
+    height: 50px;
+}
+
+.ai-models-container label {
+  font-size: 35px;
+}
+
+@media screen and (max-width: 1040px) {
+  .ai-models-container label {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+    .ai-models-container {
+      width: 35vw;
+    }
+    .ai-models-container label {
+      font-size: 18px;
+    }
+  }
+

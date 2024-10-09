@@ -5,32 +5,46 @@
     justify-content: space-between;
     border: 1px solid black;
     height: calc(100vh - 20px);
-    width: 600px;
+    width: 95vw;
     margin: 10px auto;
+    background-color: #62606b;
+    border-radius: 8px;
 }
 
 .text-input-container {
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
     height: 50px;
-    width: 580px;
+    width: 92vw;
     margin: 0 auto 10px;
+    background-color: rgb(138, 135, 148);
+    border-radius: 8px;
+}
+
+.text-input-field::placeholder {
+    color: rgb(175, 175, 175);
 }
 
 .send-button {
     flex: 1;
     height: calc(100% - 10px);
     margin: 5px 0;
+    background-color: rgb(138, 135, 148);
+    border: none;
+    
 }
 
 .text-input-field {
     flex: 2;
+    background-color: rgb(138, 135, 148);
+    border: none;
+    border-radius: 8px;
 }
 
 .all-messages {
     width: calc(100% - 16px);
     padding: 8px;
+    overflow-y: scroll;
 }
 
 .user-group {
@@ -54,6 +68,7 @@
 
 .user-message {
     text-align: right;
+    color: white;
 }
 .ai-group {
     display: flex;
@@ -76,4 +91,5 @@
 
 .ai-response {
     text-align: left;
+    color: white;
 }
